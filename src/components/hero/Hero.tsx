@@ -4,7 +4,7 @@ export const Hero = () => {
   return (
     <section className="bg-black">
       <div className="relative px-8 bg-black py-8 max-w-[1300px] mx-auto">
-        <div className="bg-white w-[260px] md:w-[600px] min-h-[240px] md:min-h-[300px] my-5 rounded-2xl p-5 flex flex-col justify-between">
+        <div className="bg-white w-[300px] md:w-[600px] min-h-[240px] md:min-h-[300px] my-5 rounded-2xl p-5 flex flex-col justify-between">
           <div>
             <h3 className="font-tektur-700 text-2xl md:text-7xl text-center">
               JustRobotics

@@ -20,7 +20,7 @@ const items = [
 
 export const Cards = () => {
   return (
-    <section className="z-10 max-w-[1150px] mx-auto flex gap-8 px-8 flex-wrap">
+    <section className="z-10 max-w-[1150px] mx-auto flex gap-8 px-8 flex-wrap mb-5 md:mb-0">
       {items.map((item) => (
         <Card key={item.id} item={item} />
       ))}
