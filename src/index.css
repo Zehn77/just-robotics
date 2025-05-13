@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Tektur";
+  src: url("./fonts/Tektur-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Tektur-400";
+  src: url("./fonts/Tektur-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Tektur-700";
+  src: url("./fonts/Tektur-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Tektur-800";
+  src: url("./fonts/Tektur-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Tektur-600";
+  src: url("./fonts/Tektur-Medium.ttf") format("truetype");
+}
+
+@theme {
+  --color-yellow: #ffe000;
+  --color-yellow-2: #f0d625;
+  --font-tektur-400: "Tektur-400", sans-serif;
+  --font-tektur-700: "Tektur-700", sans-serif;
+  --font-tektur-800: "Tektur-800", sans-serif;
+  --font-tektur-600: "Tektur-600", sans-serif;
+}
+
+body {
+  background-color: black;
+}

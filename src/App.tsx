@@ -1,7 +1,15 @@
+import { Cards } from "./components/cards/Cards";
+import { Header } from "./components/header/Header";
+import { Hero } from "./components/hero/Hero";
+
 export default function App() {
   return (
-    <>
-      <h3 className="text-red-500">Welcome to the App Component</h3>
-    </>
+    <div className="font-tektur-400">
+      <Header />
+
+      <Hero />
+
+      <Cards />
+    </div>
   );
 }
