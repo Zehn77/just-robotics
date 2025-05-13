@@ -16,7 +16,7 @@ const data = [
 export const Description = () => {
   return (
     <section className="bg-white p-4 md:p-16 md:mt-[-20px]">
-      <ul className="max-w-[1100px] mx-auto text-lg">
+      <ul className="max-w-[1100px] mx-auto text-base md:text-lg">
         {data.map((d) => (
           <li key={d.id} className="">
             <span className="font-tektur-700">{d.title}</span>
