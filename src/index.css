@@ -2,27 +2,27 @@
 
 @font-face {
   font-family: "Tektur";
-  src: url("./assets/fonts/Tektur-Regular.ttf") format("truetype");
+  src: url("./fonts/Tektur-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Tektur-400";
-  src: url("./assets/fonts/Tektur-Regular.ttf") format("truetype");
+  src: url("./fonts/Tektur-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Tektur-700";
-  src: url("./assets/fonts/Tektur-Bold.ttf") format("truetype");
+  src: url("./fonts/Tektur-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Tektur-800";
-  src: url("./assets/fonts/Tektur-ExtraBold.ttf") format("truetype");
+  src: url("./fonts/Tektur-ExtraBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Tektur-600";
-  src: url("./assets/fonts/Tektur-Medium.ttf") format("truetype");
+  src: url("./fonts/Tektur-Medium.ttf") format("truetype");
 }
 
 @theme {
