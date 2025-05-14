@@ -7,6 +7,7 @@ import { Hero } from "./components/hero/Hero";
 import { LessonsForm } from "./components/lessons-form/LessonsForm";
 import { Reviews } from "./components/reviews/Reviews";
 import { ToastContainer } from "react-toastify";
+import { Map } from "./components/map/Map";
 
 export default function App() {
   return (
@@ -26,6 +27,8 @@ export default function App() {
       <Reviews />
 
       <LessonsForm />
+
+      <Map />
 
       <Footer />
     </div>

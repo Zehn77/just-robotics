@@ -96,7 +96,7 @@ export const LessonsForm = () => {
 
           <button
             type="submit"
-            className={`${styles.glowing_button_shadow} w-full  text-black uppercase  bg-yellow px-8 py-2.5 rounded-md cursor-pointer font-tektur-700`}
+            className={`${styles.glowing_button_shadow} w-full  text-black uppercase  bg-yellow px-8 py-2.5 rounded-md cursor-pointer font-tektur-600`}
           >
             получить
           </button>
