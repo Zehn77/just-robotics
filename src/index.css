@@ -28,6 +28,7 @@
 @theme {
   --color-yellow: #ffe000;
   --color-yellow-2: #f0d625;
+  --color-gray: #c4c4c4;
   --font-tektur-400: "Tektur-400", sans-serif;
   --font-tektur-700: "Tektur-700", sans-serif;
   --font-tektur-800: "Tektur-800", sans-serif;
@@ -36,4 +37,12 @@
 
 body {
   background-color: black;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

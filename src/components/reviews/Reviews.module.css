@@ -1,0 +1,6 @@
+.glowing_shadow {
+    box-shadow: 
+      10px -10px 30px 7px rgba(185, 185, 0, 0.5),  /* top glow */
+      10px 10px 40px 7px rgba(185, 185, 0, 0.7);   /* bottom glow */
+  }
+  
