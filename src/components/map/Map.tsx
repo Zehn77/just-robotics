@@ -1,12 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./Map.module.css";
 import { MapIcons } from "./MapIcons";
-import { YMaps, Map as YandexMap, Placemark } from "react-yandex-maps";
 
 const BRANCHES = {
   branchC4: { name: "Филиал ц4", lat: 41.318032, lon: 69.279045 },
   branchBeruni: { name: "Филиал беруни", lat: 41.341163, lon: 69.212857 },
 };
+
+declare global {
+  interface Window {
+    ymaps: any;
+  }
+}
 
 export const Map = () => {
   const [branch, setBranch] = useState(BRANCHES.branchC4);
@@ -14,6 +19,20 @@ export const Map = () => {
   useEffect(() => {
     setBranch(branch);
   }, [branch]);
+
+  const mapRef = useRef(null);
+
+  useEffect(() => {
+    if (window.ymaps && mapRef.current) {
+      window.ymaps.ready(() => {
+        new window.ymaps.Map(mapRef.current, {
+          center: [41.318032, 69.279045],
+          zoom: 15,
+          controls: ["zoomControl"],
+        });
+      });
+    }
+  }, []);
 
   return (
     <section>
@@ -45,21 +64,7 @@ export const Map = () => {
         <MapIcons />
       </div>
 
-      <div className="my-8">
-        <YMaps>
-          <YandexMap
-            defaultState={{
-              center: [branch.lat, branch.lon],
-              zoom: 15,
-              type: "yandex#map",
-            }}
-            width="100%"
-            height={300}
-          >
-            <Placemark geometry={[branch.lat, branch.lon]} />
-          </YandexMap>
-        </YMaps>
-      </div>
+      <div className="mt-8 h-[300px] w-full" ref={mapRef}></div>
     </section>
   );
 };
