@@ -5,7 +5,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 
 export const Header = () => {
   return (
-    <header className="bg-yellow py-2 z-10 relative">
+    <header className="bg-yellow py-2 z-20 top-0 sticky">
       <nav className="bg-black px-5 py-1 md:p-2 flex justify-between md:justify-around items-center">
         <img
           className="w-[60px] h-[60px] md:w-[80px] md:h-[80px]"
