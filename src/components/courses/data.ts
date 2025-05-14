@@ -1,4 +1,4 @@
-export const data = [
+export const courses = [
   {
     id: 0,
     url: "images/children-with-robots.jpg",
