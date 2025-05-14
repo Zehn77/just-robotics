@@ -29,7 +29,7 @@ export const Hero = () => {
             "object-fill absolute bottom-[40px] rigth-0 w-[200px] right-[20px] md:w-[430px] md:top-[-85px]",
             {}
           )}
-          src="./assets/images/robot.png"
+          src="./images/robot.png"
           alt="Robot image"
         />
       </div>

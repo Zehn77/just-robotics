@@ -9,7 +9,7 @@ export const Header = () => {
       <nav className="bg-black px-5 py-1 md:p-2 flex justify-between md:justify-around items-center">
         <img
           className="w-[60px] h-[60px] md:w-[80px] md:h-[80px]"
-          src="assets/images/logo.svg"
+          src="./images/logo.svg"
           alt="logo"
         />
 
