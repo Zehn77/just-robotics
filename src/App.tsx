@@ -3,6 +3,7 @@ import { Courses } from "./components/courses/Courses";
 import { Description } from "./components/desctiption/Description";
 import { Header } from "./components/header/Header";
 import { Hero } from "./components/hero/Hero";
+import { LessonsForm } from "./components/lessons-form/LessonsForm";
 import { Reviews } from "./components/reviews/Reviews";
 
 export default function App() {
@@ -19,6 +20,8 @@ export default function App() {
       <Courses />
 
       <Reviews />
+
+      <LessonsForm />
     </div>
   );
 }
