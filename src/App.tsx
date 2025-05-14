@@ -5,10 +5,13 @@ import { Header } from "./components/header/Header";
 import { Hero } from "./components/hero/Hero";
 import { LessonsForm } from "./components/lessons-form/LessonsForm";
 import { Reviews } from "./components/reviews/Reviews";
+import { ToastContainer } from "react-toastify";
 
 export default function App() {
   return (
     <div className="font-tektur-400">
+      <ToastContainer />
+
       <Header />
 
       <Hero />

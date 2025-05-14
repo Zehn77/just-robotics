@@ -1,12 +1,12 @@
 import { useState } from "react";
 import styles from "./LessonsForm.module.css";
 import { CourseSelection } from "./CourseSelection";
-import axios from "axios";
-// const url =
-//   "https://script.google.com/macros/s/AKfycbw-Kr1SCmyB6d6WLeDf150xOzRif1w9Xcq8MLXklY1KseqFiX1oWc7rO_UEn10dzk1CiQ/exec";
+import getFormattedDateTime from "../../helper/date";
 
-const url =
-  "https://script.google.com/macros/s/AKfycbw_g2Da9JeQnuOv9sdPcgT1bcBXJzT7E8DY2nmj5ne3yWncsva2ZhU_nvRNyICsNe9j2Q/exec";
+import { toast } from "react-toastify";
+
+import { API } from "../../api/api";
+
 export const LessonsForm = () => {
   const [data, setData] = useState({
     name: "",
@@ -15,6 +15,15 @@ export const LessonsForm = () => {
     course: "",
   });
 
+  const cleanTheForm = () => {
+    setData({
+      name: "",
+      phone: "",
+      age: "",
+      course: "",
+    });
+  };
+
   const setCourse = (value: string) => {
     setData({ ...data, course: value });
   };
@@ -22,21 +31,27 @@ export const LessonsForm = () => {
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const body = {
+    const body = JSON.stringify({
       Name: data.name,
       Phone: data.phone,
       Course: data.course,
       Age: data.age,
-      Date: new Date().toLocaleDateString(),
-    };
+      Date: getFormattedDateTime(),
+    });
 
-    axios
-      .post(url, body)
-      .then((res) => {
-        console.log(res);
+    API.sendDataToGoogleSheet(body)
+      .then(() => {
+        toast.success("Success!");
+        cleanTheForm();
+        return;
       })
       .catch((err) => {
-        console.log(err);
+        if (err.message === "Network Error") {
+          toast.success("Success!");
+          cleanTheForm();
+          return;
+        }
+        toast.error("Error!");
       });
   };
   return (
